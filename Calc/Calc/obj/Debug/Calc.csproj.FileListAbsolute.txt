@@ -1,0 +1,7 @@
+C:\Labs\AutomaticTests\Calc\Calc\bin\Debug\Calc.exe.config
+C:\Labs\AutomaticTests\Calc\Calc\bin\Debug\Calc.exe
+C:\Labs\AutomaticTests\Calc\Calc\bin\Debug\Calc.pdb
+C:\Labs\AutomaticTests\Calc\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+C:\Labs\AutomaticTests\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.cache
+C:\Labs\AutomaticTests\Calc\Calc\obj\Debug\Calc.exe
+C:\Labs\AutomaticTests\Calc\Calc\obj\Debug\Calc.pdb
