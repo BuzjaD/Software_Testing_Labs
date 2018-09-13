@@ -53,7 +53,7 @@ namespace Calc
         {
              Console.WriteLine("Result: "+this.buffer);
         }
-
+        //100
         public void Reset()
         {
             this.buffer = 0;
