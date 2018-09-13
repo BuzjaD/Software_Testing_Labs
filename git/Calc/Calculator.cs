@@ -61,7 +61,7 @@ namespace Calc
 
         public void ChooseOper(char oper, double b)
         {
-            switch (oper)
+            switch (oper)//TODO: add more operators
             {
                 case '+':
                     {
