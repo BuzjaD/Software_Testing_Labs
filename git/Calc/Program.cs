@@ -1,4 +1,5 @@
 ﻿using System;
+//Some comment
 
 namespace Calc
 {
@@ -43,7 +44,7 @@ namespace Calc
                 }
                 catch
                 {
-                    Console.WriteLine("Uncorrect number or operation");
+                    Console.WriteLine("Error!!! Uncorrect number or operation");
                 }
             }
         }
