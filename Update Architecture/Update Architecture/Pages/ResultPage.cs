@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace PageFactoryProject.Pages
+namespace Update_Architecture.Pages
 {
     public class ResultPage
     {
@@ -20,6 +20,21 @@ namespace PageFactoryProject.Pages
 
         [FindsBy(How = How.CssSelector, Using = ".economy-price .price")]
         private IList<IWebElement> prices;
+
+        [FindsBy(How = How.CssSelector, Using = ".economy-price")]
+        private IList<IWebElement> economPrices;
+        [FindsBy(How = How.XPath, Using = "//button[contains(text(),'Найти')]")]
+        private IWebElement submitBtn;
+
+        public PassengerPage getEconomTicket()
+        {
+            economPrices[0].Click();
+            IWebElement firstEl = driver.FindElement(By.CssSelector(".brand.er"));
+            firstEl.Click();
+            IWebElement nextButton = driver.FindElement(By.XPath("//button[contains(text(),'Далее')]"));
+            nextButton.Click();
+            return new PassengerPage(driver);
+        }
 
         public bool checkMinPrice()
         {
