@@ -33,7 +33,7 @@ namespace Update_Architecture.Tests
         [Test]
         public void checkPassengerBirthDate()
         {
-            steps.checkBirthDate("Минск", "Лондон", "10", "23","08082200");
+            steps.checkBirthDate("Минск", "Лондон", "10", "23","08.08.2200");
         }
     }
 }

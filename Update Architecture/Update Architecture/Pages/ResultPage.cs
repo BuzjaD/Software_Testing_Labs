@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using OpenQA.Selenium.Support.PageObjects;
+using System.Threading;
 
 namespace Update_Architecture.Pages
 {
@@ -33,6 +34,7 @@ namespace Update_Architecture.Pages
             firstEl.Click();
             IWebElement nextButton = driver.FindElement(By.XPath("//button[contains(text(),'Далее')]"));
             nextButton.Click();
+            Thread.Sleep(1000);
             return new PassengerPage(driver);
         }
 

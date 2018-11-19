@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using OpenQA.Selenium.Support.PageObjects;
+using System.Threading;
 
 namespace Update_Architecture.Pages
 {
@@ -18,16 +19,20 @@ namespace Update_Architecture.Pages
         [FindsBy(How = How.Id, Using = "p_0_dateOfBirth")]
         private IWebElement dateOfBirthField;
 
-        [FindsBy(How = How.CssSelector, Using = "#p_0_dateOfBirth + .field-validation-error")]
-        private IWebElement validationField;        
-
-        private string errMessage = "Дата больше ограничения по возврасту пассажира";
+        [FindsBy(How = How.ClassName, Using = "field-validation-error")]
+        private IList<IWebElement> validationFields;        
 
         public bool CheckBirthDate(string date)
         {
+            string executeStr = "document.getElementById('p_0_dateOfBirth').value = '" + date + "'";
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            Thread.Sleep(2000);
             dateOfBirthField.SendKeys(date);
+            js.ExecuteScript(executeStr);
+            Thread.Sleep(2000);
             dateOfBirthField.SendKeys(Keys.Enter);
-            return (validationField.Text == errMessage);
+            Thread.Sleep(5000);
+            return (validationFields[3].Text.Length != 0);
         }
     }
 }
