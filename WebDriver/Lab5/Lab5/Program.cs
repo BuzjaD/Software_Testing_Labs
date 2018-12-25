@@ -55,6 +55,7 @@ namespace Lab5
             driver.Quit();
         }
 
+        //Test validation, when user try to pick uncorrect date
         [Test]
         public void Test()
         {
@@ -62,25 +63,20 @@ namespace Lab5
 
             IWebElement searchForm = driver.FindElement(By.Id("ibe"));
             IWebElement from = searchForm.FindElement(By.Id("OriginLocation_Combobox"));
+            IWebElement to = searchForm.FindElement(By.Id("DestinationLocation_Combobox"));
+            IWebElement oneSide = searchForm.FindElement(By.XPath("//label[@for='JourneySpan_Ow']"));
+            IWebElement dateInput = searchForm.FindElement(By.ClassName("ui-date-input"));
+            IWebElement dateField = searchForm.FindElement(By.Id("DepartureDate_Datepicker"));
+    
             from.Clear();
             from.SendKeys("Минск");
-            Thread.Sleep(1000);
-            from.SendKeys(Keys.Enter);
-            Thread.Sleep(1000);
-            IWebElement to = searchForm.FindElement(By.Id("DestinationLocation_Combobox"));
             to.Clear();
-            to.SendKeys("Минск");
-            Thread.Sleep(1000);
-            to.SendKeys(Keys.Enter);
-
-            searchForm.FindElement(By.ClassName("ui-date-input")).Click();
-            Thread.Sleep(1000);
-            SetDate("10","20");
-            Thread.Sleep(1000);
-            SetDate("10", "30");
-            Thread.Sleep(1000);
+            to.SendKeys("Лондон");
+            oneSide.Click();
+            dateInput.Click();
+            SetDate("9","9");//old date 9.10.2018
             searchForm.FindElement(By.Id("DestinationLocation_Combobox")).SendKeys(Keys.Enter);
-            Thread.Sleep(2000);
+            Assert.IsTrue(dateField.GetAttribute("class").Contains("input-validation-error"));
         }
     }
 }
