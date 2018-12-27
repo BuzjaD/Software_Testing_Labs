@@ -7,9 +7,9 @@ namespace WebDriverATF2.Steps
     {
         IWebDriver driver;
         WebDriverWait wait;
-        Pages.MainPage mainPage;
-        Pages.ResultPage resultPage;
-        Pages.PassengerPage passengerPage;
+        Pages.MainPage mainPage;//Start page on site
+        Pages.ResultPage resultPage;//Page after search
+        Pages.PassengerPage passengerPage;//Page after choose ticket
 
         public void InitBrowser()
         {
