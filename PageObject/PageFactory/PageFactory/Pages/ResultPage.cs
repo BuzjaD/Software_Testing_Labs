@@ -2,16 +2,19 @@
 using System;
 using System.Collections.Generic;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 
 namespace PageFactoryProject.Pages
 {
     public class ResultPage
     {
         private IWebDriver driver;
+        private readonly WebDriverWait wait;
 
         public ResultPage(IWebDriver driver)
-        {
+        {          
             this.driver = driver;
+            this.wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             PageFactory.InitElements(driver, this);
         }
 
@@ -23,6 +26,7 @@ namespace PageFactoryProject.Pages
 
         public bool checkMinPrice()
         {
+            wait.Until(ExpectedConditions.ElementToBeClickable(activeTabPrice));
             double minPrice = Convert.ToDouble(activeTabPrice.Text.Split('\n')[1].Split(' ')[0]);
             double min = Convert.ToDouble(prices[0].Text.Split(' ')[0]);
 

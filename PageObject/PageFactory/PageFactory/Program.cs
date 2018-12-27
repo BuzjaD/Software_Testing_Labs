@@ -38,7 +38,7 @@ namespace PageFactoryProject
         public void CheckCorrectActivePrice()
         {
             HomePage homePage = new HomePage(driver);
-            ResultPage resultPage = homePage.GoToResultPage("Минск", "Лондон", "10", "23");
+            ResultPage resultPage = homePage.GoToResultPage("Минск", "Лондон", "0", "9");
             Assert.IsTrue(resultPage.checkMinPrice());
         }
     }

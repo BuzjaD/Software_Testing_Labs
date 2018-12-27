@@ -59,7 +59,7 @@ namespace PageFactoryProject.Pages
             Thread.Sleep(1000);
             submitBtn.Submit();
 	    //driver.Navigate().GoToUrl("https://ibe.belavia.by/select/MSQLON/2018-11-23/adults-1/children-0/infants-0?culture=ru");
-            Thread.Sleep(1000);
+            
             return new ResultPage(driver);
         }
     }

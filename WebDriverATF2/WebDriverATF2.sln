@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateArchitecture", "Update Architecture\UpdateArchitecture.csproj", "{02CF392B-D244-4371-B042-3B2547DD985D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverATF2", "WebDriverATF2\WebDriverATF2.csproj", "{62CE3160-7A99-477D-A5D3-122C15699F50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02CF392B-D244-4371-B042-3B2547DD985D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02CF392B-D244-4371-B042-3B2547DD985D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02CF392B-D244-4371-B042-3B2547DD985D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02CF392B-D244-4371-B042-3B2547DD985D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CE3160-7A99-477D-A5D3-122C15699F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CE3160-7A99-477D-A5D3-122C15699F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CE3160-7A99-477D-A5D3-122C15699F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CE3160-7A99-477D-A5D3-122C15699F50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {73590FDE-2445-49A5-A88A-7B384D4BF81D}
+		SolutionGuid = {C93DBAA8-13A4-45E8-8ED6-DF7A637CEE10}
 	EndGlobalSection
 EndGlobal
